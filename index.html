@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Салон красоты | Beauty Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- 1) HERO -->
+  <section class="hero" id="top">
+    <div class="container">
+      <h1>Beauty Studio</h1>
+      <p>Стрижки • Маникюр • Брови — уютный салон в Алматы</p>
+      <button class="btn" id="openBooking">Записаться</button>
+      <button class="btn" id="openQuiz">Подобрать услугу</button>
+    </div>
+  </section>
+
+  <!-- 2) УСЛУГИ -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2>Услуги</h2>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Стрижка</h3>
+          <p>Женские стрижки и укладки</p>
+        </div>
+
+        <div class="card">
+          <h3>Маникюр</h3>
+          <p>Гель-лак и уход</p>
+        </div>
+
+        <div class="card">
+          <h3>Брови</h3>
+          <p>Коррекция и окрашивание</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3) ПРАЙС -->
+  <section class="section" id="price">
+    <div class="container">
+      <h2>Прайс</h2>
+
+      <table class="price-table">
+        <tr>
+          <th>Услуга</th>
+          <th>Цена</th>
+        </tr>
+        <tr>
+          <td>Женская стрижка</td>
+          <td>7000 тг</td>
+        </tr>
+        <tr>
+          <td>Маникюр</td>
+          <td>6000 тг</td>
+        </tr>
+        <tr>
+          <td>Брови</td>
+          <td>4000 тг</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- 4) МАСТЕРА -->
+  <section class="section" id="masters">
+    <div class="container">
+      <h2>Наши мастера</h2>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Анна</h3>
+          <p>Парикмахер • 6 лет опыта</p>
+        </div>
+
+        <div class="card">
+          <h3>Мария</h3>
+          <p>Маникюр • 4 года опыта</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5) ГАЛЕРЕЯ -->
+  <h2>Галерея (до/после)</h2>
+
+<div class="before-after" id="ba1">
+  <img class="ba-img" src="images/before.jpg" alt="До">
+  <div class="ba-after">
+    <img class="ba-img" src="images/after.jpg" alt="После">
+  </div>
+
+  <input class="ba-range" type="range" min="0" max="100" value="50">
+  <div class="ba-line"></div>
+</div>
+
+<p class="hint">Потяни ползунок — сравни “до/после”.</p>
+
+  <!-- 6) ОТЗЫВЫ -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <h2>Отзывы</h2>
+
+      <div class="card">
+        <p>“Очень уютно и красиво сделали маникюр. Вернусь ещё!”</p>
+        <b>Айгерим</b>
+      </div>
+
+      <div class="card">
+        <p>“Стрижка супер, всё аккуратно. Спасибо!”</p>
+        <b>Алина</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7) КОНТАКТЫ -->
+  <section class="section" id="contacts">
+    <div class="container">
+      <h2>Контакты</h2>
+      <p><b>Адрес:</b> Алматы, центр</p>
+      <p><b>Телефон:</b> +7 777 000 00 00</p>
+      <p><b>Время работы:</b> 10:00 – 20:00</p>
+
+      <div class="map">
+        Здесь будет карта (позже)
+      </div>
+    </div>
+  </section>
+
+  <!-- 8) FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+
+      <details class="faq-item">
+        <summary>Сколько длится маникюр?</summary>
+        <p>Обычно 1–1.5 часа.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Нужна ли предоплата?</summary>
+        <p>Нет, запись бесплатная.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== -->
+  <!-- МОДАЛЬНОЕ ОКНО ЗАПИСИ -->
+  <!-- ===================== -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeBooking">✕</button>
+      <h3>Онлайн-запись</h3>
+
+      <form id="bookingForm">
+        <label>Имя</label>
+        <input type="text" name="name" required />
+
+        <label>Телефон</label>
+        <input type="tel" name="phone" required />
+
+        <label>Услуга</label>
+        <select name="service" required>
+          <option value="Стрижка">Стрижка</option>
+          <option value="Маникюр">Маникюр</option>
+          <option value="Брови">Брови</option>
+        </select>
+
+        <label>Комментарий</label>
+        <textarea name="comment" rows="3" placeholder="Например: после 18:00"></textarea>
+
+        <button class="btn" type="submit">Отправить</button>
+        <p class="hint" id="formStatus"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===================== -->
+  <!-- МОДАЛЬНОЕ ОКНО КВИЗА -->
+  <!-- ===================== -->
+  <div class="modal" id="quizModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeQuiz">✕</button>
+
+      <h3>Подберём услугу</h3>
+
+      <form id="quizForm">
+        <label>Что вас интересует?</label>
+        <select name="service" required>
+          <option value="Стрижка">Стрижка</option>
+          <option value="Маникюр">Маникюр</option>
+          <option value="Брови">Брови</option>
+        </select>
+
+        <label>Когда удобно прийти?</label>
+        <select name="time" required>
+          <option value="Утром">Утром</option>
+          <option value="Днём">Днём</option>
+          <option value="Вечером">Вечером</option>
+        </select>
+
+        <label>Ваш телефон</label>
+        <input type="tel" name="phone" required />
+
+        <button class="btn" type="submit">Получить рекомендацию</button>
+
+        <p class="hint" id="quizStatus"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ВАЖНО: скрипт должен быть ПОСЛЕ всех блоков -->
+   <!-- POPUP АКЦИЯ -->
+<div class="popup" id="promoPopup">
+  <div class="popup-content">
+    <button class="popup-close" id="closePromo">✕</button>
+
+    <h3>-10% на первое посещение</h3>
+    <p class="hint">Оставьте телефон — пришлём промокод и запишем вас.</p>
+
+    <form id="promoForm">
+      <input type="tel" name="phone" placeholder="Ваш телефон" required />
+      <button class="btn" type="submit">Получить скидку</button>
+      <p class="hint" id="promoStatus"></p>
+    </form>
+  </div>
+</div>
+  <script src="script.js"></script>
+  <a href="https://t.me/username" class="telegram-btn">Записаться</a>
+</body>
+</html>
