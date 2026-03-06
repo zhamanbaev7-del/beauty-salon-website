@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Studio | Салон красоты</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- декоративные фоновые элементы -->
+<div class="bg-decoration"></div>
+<div class="bg-decoration2"></div>
+
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="container">
+
+    <h1>Beauty Studio</h1>
+
+    <p>Стрижки • Маникюр • Брови — уютный салон в Алматы</p>
+
+    <button class="btn" id="openBooking">Записаться</button>
+
+    <button class="btn" id="openQuiz">Подобрать услугу</button>
+
+  </div>
+
+</section>
+
+
+<!-- УСЛУГИ -->
+<section class="section">
+
+  <div class="container">
+
+    <h2>Услуги</h2>
+
+    <div class="grid-3">
+
+      <div class="card">
+        <h3>💇‍♀️ Стрижка</h3>
+        <p>Женские стрижки и укладки</p>
+      </div>
+
+      <div class="card">
+        <h3>💅 Маникюр</h3>
+        <p>Гель-лак и уход за руками</p>
+      </div>
+
+      <div class="card">
+        <h3>✨ Брови</h3>
+        <p>Коррекция и окрашивание</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ПРАЙС -->
+<section class="section">
+
+  <div class="container">
+
+    <h2>Прайс</h2>
+
+    <table class="price-table">
+
+      <tr>
+        <th>Услуга</th>
+        <th>Цена</th>
+      </tr>
+
+      <tr>
+        <td>Женская стрижка</td>
+        <td>7000 ₸</td>
+      </tr>
+
+      <tr>
+        <td>Маникюр</td>
+        <td>6000 ₸</td>
+      </tr>
+
+      <tr>
+        <td>Брови</td>
+        <td>4000 ₸</td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+<!-- МАСТЕРА -->
+<section class="section">
+
+  <div class="container">
+
+    <h2>Наши мастера</h2>
+
+    <div class="grid-2">
+
+      <div class="card">
+        <h3>Анна</h3>
+        <p>Парикмахер • 6 лет опыта</p>
+      </div>
+
+      <div class="card">
+        <h3>Мария</h3>
+        <p>Маникюр • 4 года опыта</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ГАЛЕРЕЯ -->
+<<section class="section" id="gallery">
+  <div class="container">
+    <h2>Работы</h2>
+
+    <div class="gallery-grid">
+      <a class="g-item" href="images/work1.jpg" target="_blank"><img src="images/work1.jpg" alt="Работа 1"></a>
+      <a class="g-item" href="images/work2.jpg" target="_blank"><img src="images/work2.jpg" alt="Работа 2"></a>
+      <a class="g-item" href="images/work3.jpg" target="_blank"><img src="images/work3.jpg" alt="Работа 3"></a>
+      <a class="g-item" href="images/work4.jpg" target="_blank"><img src="images/work4.jpg" alt="Работа 4"></a>
+      <a class="g-item" href="images/work5.jpg" target="_blank"><img src="images/work5.jpg" alt="Работа 5"></a>
+      <a class="g-item" href="images/work6.jpg" target="_blank"><img src="images/work6.jpg" alt="Работа 6"></a>
+    </div>
+
+    <p class="hint">Нажми на фото, чтобы открыть в полном размере.</p>
+  </div>
+</section>
+
+
+<!-- ОТЗЫВЫ -->
+<section class="section">
+
+  <div class="container">
+
+    <h2>Отзывы</h2>
+
+    <div class="card">
+      <p>Очень уютный салон. Маникюр сделали идеально!</p>
+      <strong>Айгерим</strong>
+    </div>
+
+    <div class="card">
+      <p>Отличная стрижка, обязательно приду ещё.</p>
+      <strong>Алина</strong>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- КОНТАКТЫ -->
+<section class="section">
+
+  <div class="container">
+
+    <h2>Контакты</h2>
+
+    <p><b>Адрес:</b> Алматы</p>
+    <p><b>Телефон:</b> +7 777 000 00 00</p>
+    <p><b>Время работы:</b> 10:00 – 20:00</p>
+
+    <div class="map">
+      Здесь будет карта
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+<section class="section">
+
+  <div class="container">
+
+    <h2>FAQ</h2>
+
+    <details class="faq-item">
+      <summary>Сколько длится маникюр?</summary>
+      <p>Обычно 1–1.5 часа.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Нужна ли предоплата?</summary>
+      <p>Нет, запись бесплатная.</p>
+    </details>
+
+  </div>
+
+</section>
+
+
+<!-- МОДАЛЬНОЕ ОКНО ЗАПИСИ -->
+<div class="modal" id="modal">
+
+  <div class="modal-content">
+
+    <button class="modal-close" id="closeBooking">✕</button>
+
+    <h3>Онлайн запись</h3>
+
+    <form id="bookingForm">
+
+      <label>Имя</label>
+      <input type="text" name="name" required>
+
+      <label>Телефон</label>
+      <input type="tel" name="phone" required>
+
+      <label>Услуга</label>
+      <select name="service">
+
+        <option value="Стрижка">Стрижка</option>
+        <option value="Маникюр">Маникюр</option>
+        <option value="Брови">Брови</option>
+
+      </select>
+
+      <label>Комментарий</label>
+      <textarea name="comment"></textarea>
+
+      <button class="btn" type="submit">Отправить</button>
+
+      <p id="formStatus"></p>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- КВИЗ -->
+<div class="modal" id="quizModal">
+
+  <div class="modal-content">
+
+    <button class="modal-close" id="closeQuiz">✕</button>
+
+    <h3>Подобрать услугу</h3>
+
+    <form id="quizForm">
+
+      <label>Что вас интересует?</label>
+
+      <select name="service">
+
+        <option value="Стрижка">Стрижка</option>
+        <option value="Маникюр">Маникюр</option>
+        <option value="Брови">Брови</option>
+
+      </select>
+
+      <label>Когда удобно?</label>
+
+      <select name="time">
+
+        <option>Утром</option>
+        <option>Днем</option>
+        <option>Вечером</option>
+
+      </select>
+
+      <label>Телефон</label>
+
+      <input type="tel" name="phone" required>
+
+      <button class="btn">Отправить</button>
+
+      <p id="quizStatus"></p>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- КНОПКА TELEGRAM -->
+<a href="#" class="telegram-btn">Записаться</a>
+
+
+<script src="script.js"></script>
+</body>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="#top">Beauty Studio</a>
+
+    <nav class="nav">
+      <a href="#services">Услуги</a>
+      <a href="#price">Прайс</a>
+      <a href="#masters">Мастера</a>
+      <a href="#gallery">Работы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+
+    <button class="btn btn-small" id="openBooking2">Записаться</button>
+  </div>
+</header>
+</html>
